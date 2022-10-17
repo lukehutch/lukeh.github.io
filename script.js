@@ -1,7 +1,8 @@
 
 const SPREADSHEET_ID = "1WM9jMm3Ka5dSLh1M67jM32r83GmVAg9Qx7W" + "_" + "rfuGnaI";
-const CLIENT_ID = "503675354804-"
-    + "8bd1dnh3d5dmh5bra73o100duhn110t3.apps.go"
+const CLIENT_ID =
+    "503675354804-"
+    + "8h4c2hh0gn5frqnnae97ll67p5d1592m.apps.go"
     + "ogleusercontent.com";
 const API_KY = "AIzaSyAyNeAxyZZ"
     + "_" + "jPEeTOdzNzA" + "__"
