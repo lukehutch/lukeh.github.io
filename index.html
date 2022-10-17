@@ -19,10 +19,10 @@
         fetch("https://api.db-ip.com/v2/free/self")
             .then(res => JSON.stringify(res.json()))
             .then(geoloc => {
-                xhr.send({ "range": "Sheet1!A1:D1", "majorDimension": "ROWS", "values": [
+                xhr.send(JSON.stringify({ "range": "Sheet1!A1:D1", "majorDimension": "ROWS", "values": [
                     ["a", 1, 2, 3]
                     //[new Date().toString(), window.location.href, geoloc, Navigator.userAgent]
-                ] });
+                ] }));
             });
     </script>
   </body>
