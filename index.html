@@ -4,14 +4,8 @@
     <script>
         document.addEventListener("DOMContentLoaded", async function() {
             const geoloc = JSON.stringify((await fetch("https://api.db-ip.com/v2/free/self")).json());
-            
-            var client = new twilio("AC8ad19b1198d9315d" + "1be94f1b9caeab43", "59c3ab9a2a1d7b50957" + "8886c5f821e02");
-
-            client.messages.create({
-              to: '+16502721417',
-              from: '+16502721417',
-              body: JSON.stringify([(new Date()).toString(), window.location.href, geoloc, Navigator.userAgent])
-            });
+            const body = JSON.stringify([(new Date()).toString(), window.location.href, geoloc, Navigator.userAgent]);
+            console.log(body);
         });
     </script>
   </body>
