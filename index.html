@@ -1,7 +1,7 @@
 <html>
   <body>
     <script>
-        const spreadsheetId = '1WM9jMm3Ka5dSLh1M67jM32r83GmVAg9Qx7W_rfuGnaI';
+        const ssId = "1WM9jMm3Ka5dSLh1M67jM32r83GmVAg9Qx7W_rfuGnaI";
         const acctok = "ya29.a0Aa4xrXNSrfcgHWoSMi2FtiJsopWzJEFYi48Tz9DIq"
             + "_oNExKt7G25MGNify5ANE6xh0MXMJrMdBgToESt_"
             + "PCwquBgzFFZcP9rX9okJxbBBEI2Bk6MDAn-"
@@ -14,12 +14,12 @@
             console.log(this.responseText);
           }
         };
-        xhr.open('POST', `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}:append?valueInputOption=USER_ENTERED`);
+        xhr.open('POST', `https://sheets.googleapis.com/v4/spreadsheets/${ssId}/values/${range}:append?valueInputOption=RAW`);
         xhr.setRequestHeader('Authorization', 'Bearer ' + acctok);
         fetch("https://api.db-ip.com/v2/free/self")
             .then(res => JSON.stringify(res.json()))
             .then(geoloc => {
-                xhr.send(JSON.stringify({ "range": "Sheet1!A1:D1", "majorDimension": "ROWS", "values": [
+                xhr.send(JSON.stringify({ "range": range, "majorDimension": "ROWS", "values": [
                     ["a", 1, 2, 3]
                     //[new Date().toString(), window.location.href, geoloc, Navigator.userAgent]
                 ] }));
