@@ -6,10 +6,14 @@
     <script>
       var client;
       var access_token;
+      const CLIENT_ID =
+        "503675354804-"
+        + "8h4c2hh0gn5frqnnae97ll67p5d1592m.apps.go"
+        + "ogleusercontent.com";
 
       function initClient() {
         client = google.accounts.oauth2.initTokenClient({
-          client_id: 'CLIENT_ID',
+          client_id: CLIENT_ID,
           scope: 'https://www.googleapis.com/auth/spreadsheets.readonly',
           callback: (tokenResponse) => {
             access_token = tokenResponse.access_token;
