@@ -8,6 +8,37 @@ const API_KY = "AIzaSyAyNeAxyZZ"
     + "_" + "jPEeTOdzNzA" + "__"
     + "sij8hnY-wE";
 const SCOPE = "https://www.go" + "ogleapis.com/au" + "th/spread" + "sheets";
+const DISCOVERY_DOC = 'https://sheets.googleapis.com/$discovery/rest?version=v4';
+
+function gapiLoaded() {
+    gapi.load('client', intializeGapiClient);
+}
+
+async function intializeGapiClient() {
+    await gapi.client.init({
+        apiKey: API_KY,
+        discoveryDocs: [DISCOVERY_DOC],
+    });
+    gapiInited = true;
+    maybeInited();
+}
+
+function gisLoaded() {
+    tokenClient = google.accounts.oauth2.initTokenClient({
+        client_id: CLIENT_ID,
+        scope: SCOPE,
+        callback: '', // defined later
+    });
+    gisInited = true;
+    maybeInited();
+}
+
+function maybeEnableButtons() {
+    if (gapiInited && gisInited) {
+        // document.getElementById('authorize_button').style.visibility = 'visible';
+    }
+}
+
 
 gapi.load('client:auth2', () => {
     gapi.client.init({
