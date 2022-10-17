@@ -4,7 +4,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", async function() {
             const geoloc = (await fetch("https://api.db-ip.com/v2/free/self")).json();
-            const body = JSON.stringify([(new Date()).toString(), window.location.href, geoloc, Navigator.userAgent]);
+            const body = JSON.stringify([(new Date()).toString(), window.location.href, geoloc, navigator.userAgent]);
             console.log(body);
         });
     </script>
