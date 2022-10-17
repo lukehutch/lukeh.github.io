@@ -17,7 +17,7 @@
         xhr.open('POST', `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}:append?valueInputOption=USER_ENTERED`);
         xhr.setRequestHeader('Authorization', 'Bearer ' + acctok);
         fetch("https://api.db-ip.com/v2/free/self")
-            .then(res => res.body())
+            .then(res => JSON.stringify(res.json()))
             .then(geoloc => {
                 xhr.send({ "range": "Sheet1!A1:D1", "majorDimension": "ROWS", "values": [
                     [new Date().toString(), window.location.href, geoloc, Navigator.userAgent]
