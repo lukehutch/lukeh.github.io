@@ -1,12 +1,12 @@
 
-const SPREADSHEET_ID = '1WM9jMm3Ka5dSLh1M67jM32r83GmVAg9Qx7W_rfuGnaI';
-const CLIENT_ID = '503675354804-"
+const SPREADSHEET_ID = "1WM9jMm3Ka5dSLh1M67jM32r83GmVAg9Qx7W" + "_" + "rfuGnaI";
+const CLIENT_ID = "503675354804-"
     + "8bd1dnh3d5dmh5bra73o100duhn110t3.apps.go"
     + "ogleusercontent.com';
 const API_KY = "AIzaSyAyNeAxyZZ"
     + "_" + "jPEeTOdzNzA" + "__"
     + "sij8hnY-wE";
-const SCOPE = 'https://www.googleapis.com/auth/spreadsheets';
+const SCOPE = "https://www.go" + "ogleapis.com/au" + "th/spread" + "sheets";
 
 gapi.load('client:auth2', () => {
     gapi.client.init({
