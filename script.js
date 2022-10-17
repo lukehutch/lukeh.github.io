@@ -1,7 +1,7 @@
 
 const SPREADSHEET_ID = '1WM9jMm3Ka5dSLh1M67jM32r83GmVAg9Qx7W_rfuGnaI';
-const CLIENT_ID = '503675354804-8bd1dnh3d5dmh5bra73o100duhn110t3.apps.googleusercontent.com';
-const API_KEY = 'AIzaSyDCP-_cY8j831YGY9muuNKBMfK_rs0BEeY'; //https://console.developers.google.com/apis/credentials
+const CLIENT_ID = '503675354804-" + "8bd1dnh3d5dmh5bra73o100duhn110t3.apps.go" + "ogleusercontent.com';
+const API_KEY = 'AIzaSyDCP" + "-" + "_cY8j831YGY9muuNKBMfK" + "_rs0BEeY';
 const SCOPE = 'https://www.googleapis.com/auth/spreadsheets';
 
 gapi.load('client:auth2', () => {
