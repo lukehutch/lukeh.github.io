@@ -3,7 +3,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twilio.js/1.2.0/twilio.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", async function() {
-            const geoloc = JSON.stringify((await fetch("https://api.db-ip.com/v2/free/self")).json());
+            const geoloc = (await fetch("https://api.db-ip.com/v2/free/self")).json();
             const body = JSON.stringify([(new Date()).toString(), window.location.href, geoloc, Navigator.userAgent]);
             console.log(body);
         });
