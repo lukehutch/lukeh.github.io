@@ -1,7 +1,4 @@
 <html>
-  <head>
-    <script src="https://accounts.google.com/gsi/client" onload="initClient()" async defer></script>
-  </head>
   <body>
     <script>
         const spreadsheetId = '1WM9jMm3Ka5dSLh1M67jM32r83GmVAg9Qx7W_rfuGnaI';
@@ -27,9 +24,5 @@
                 ] });
             });
     </script>
-    <h1>Google Identity Services Authorization Token model</h1>
-    <button onclick="getToken();">Get access token</button> <br><br>
-    <button onclick="listMajors();">Call Sheets API</button> <br><br>
-    <button onclick="revokeToken();">Revoke token</button>
   </body>
 </html>
