@@ -17,6 +17,7 @@
           scope: 'https://www.googleapis.com/auth/spreadsheets.readonly',
           callback: (tokenResponse) => {
             access_token = tokenResponse.access_token;
+            console.log("access token: " + access_token);
           },
         });
       }
