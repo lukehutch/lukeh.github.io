@@ -15,8 +15,7 @@ gapi.load('client:auth2', () => {
         'scope': SCOPE,
         'discoveryDocs': ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
     }).then(()=> {
-        // gapi.auth2.getAuthInstance().isSignedIn.listen(this.updateSignInStatus);
-        this.updateSignInStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+        console.log("Logged in: " + gapi.auth2.getAuthInstance().isSignedIn.get());
     }).then(async () => {
         const geoloc = (await fetch("https://api.db-ip.com/v2/free/self")).body();
         const params = {
